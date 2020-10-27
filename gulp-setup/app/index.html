@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Finance Calculator</title>
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 	integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/dist/app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">
+            <img src="mayden-logo.png" alt="mayden academy logo">
+            <h1>Finance Calculator</h1>
+        </div>
+        <div class="about">
+                <form>
+                    <ul class="form_wrapper">
+                    <li class="form_row">
+                        <label for="amount-to-borrow"><h3>Amount to Borrow: </h3></label>
+                        <input id="amount-to-borrow" type="number" name="amount-to-borrow">
+                    </li>
+                    <li class="form_row">
+                        <label for="expected-salary"><h3>Expected Salary: </h3></label>
+                        <input id="expected-salary" type="number" name="expected-salary" value="25000">
+                    </li>
+                    <li class="form_row">
+                        <label for="repayment-percentage"><h3>Monthly Repayment Percentage <br> (minimum 10%): </h3></label>
+                        <input id="repayment-percentage" type="number" name="repayment-percentage" value="10">
+                    </li>
+                    <li class="form_row">
+                        <input class="submit-button" type="submit" value="Calculate">
+                    </li>
+                    </ul>
+                </form>
+            </div>
+            <div id="calculations" class="aboutbox">
+                <h3 id="error-message"></h3>
+                <p class="info-text">The course costs £10000. You can borrow between £1 - £10000. </p>
+                <p class="info-text">If you borrow above 80% (£8000), £500 is added to the repayment amount.</p>
+                <p class="info-text">If you borrow over 90%, an additional £500 is added. There is also a 5% upfront fee.</p>
+            </div>
+            <div class="aboutbox">
+                <p id="admin-fee"></p>
+                <p id="total-borrowed"></p>
+                <p id="pay-off"></p>
+            </div>
+    </div>
+</body>
+</html>
