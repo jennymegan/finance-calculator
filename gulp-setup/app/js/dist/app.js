@@ -23,6 +23,9 @@ document.querySelector('form').addEventListener('submit', function (e) {
         document.querySelector('#error-message').textContent = '';
         if ((borrowed > 10000) || (borrowed === 0) || (borrowed < 0) || ((percentage < 10) || (percentage > 100))) {
             document.querySelector('#error-message').textContent = 'Please enter an amount to borrow between £1 and £10000 and a % between 10 and 100.';
+            document.querySelector('#admin-fee').textContent = '';
+            document.querySelector('#total-borrowed').textContent = '';
+            document.querySelector('#pay-off').textContent = '';
         }
         else {
             if (monthlyPayment > borrowed) {

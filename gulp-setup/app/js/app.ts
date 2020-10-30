@@ -25,6 +25,10 @@ document.querySelector<HTMLFormElement>('form').addEventListener('submit', (e) =
 
         if ((borrowed > 10000) || (borrowed === 0) || (borrowed < 0) || ((percentage < 10) || (percentage > 100))) {
             (document.querySelector('#error-message') as HTMLInputElement).textContent = 'Please enter an amount to borrow between £1 and £10000 and a % between 10 and 100.'
+            document.querySelector<HTMLElement>('#admin-fee').textContent = ''
+            document.querySelector<HTMLElement>('#total-borrowed').textContent = ''
+            document.querySelector<HTMLElement>('#pay-off').textContent = ''
+
         } else {
             if (monthlyPayment > borrowed){
                 monthlyPayment = borrowed
@@ -40,3 +44,5 @@ document.querySelector<HTMLFormElement>('form').addEventListener('submit', (e) =
         document.querySelector<HTMLElement>('#error-message').textContent = 'Please complete all fields.'
     }
 })
+
+
